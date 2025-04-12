@@ -20,13 +20,27 @@ def kun_topish(y, o, k):
 
 def main():
     ism = input("Nma gap? Isming nma? ")
-    salom(ism)
+    #salom(ism)
 
-    yil = int(input("Tugilgan yiling: "))
-    oy = int(input("Qaysi oy: "))
-    kun = int(input("Qaysi kun: "))
+    while True:
 
-    haftalar = round(kun_topish(yil, oy, kun),0)
-    print(f"Dostm sen {haftalar}!")
+        yil = int(input("Tugilgan yiling: "))
+        if yil < 1924 or yil > 2025:
+            print("Notog'ri yil kiritildi!")
+            continue
+
+        oy = int(input("Qaysi oy: "))
+        if oy > 12 or oy < 0:
+            print("Notog'ri oy kiritildi!")
+            continue
+
+        kun = int(input("Qaysi kun: "))
+        if kun > 31 or kun < 0:
+            print("Notog'ri oy kiritildi!")
+            continue
+
+    #haftalar = round(kun_topish(yil, oy, kun),0)
+    #print(f"Dostm sen {haftalar}!")
 
 main()
+
